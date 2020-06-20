@@ -59,6 +59,11 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
+    def set_article
+      @article = Article.find(params[:id])
+    end
+  
   end
 
   private
